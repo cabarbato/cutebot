@@ -5,18 +5,20 @@ radio.onReceivedValue(function (name, value) {
     if (name == "y") {
         yValue = value
     }
-    if (("emote" as any) == ("0" as any)) {
-        basic.showIcon(IconNames.Heart)
-        music.playSoundEffect(music.builtinSoundEffect(soundExpression.happy), SoundExpressionPlayMode.UntilDone)
-    } else if (("emote" as any) == ("1" as any)) {
-        basic.showIcon(IconNames.Sad)
-        music.playSoundEffect(music.builtinSoundEffect(soundExpression.sad), SoundExpressionPlayMode.UntilDone)
-    } else if (("emote" as any) == ("2" as any)) {
-        basic.showIcon(IconNames.Angry)
-        music.playSoundEffect(music.builtinSoundEffect(soundExpression.mysterious), SoundExpressionPlayMode.UntilDone)
-    } else if (("emote" as any) == ("3" as any)) {
-        basic.showIcon(IconNames.Asleep)
-        music.playSoundEffect(music.builtinSoundEffect(soundExpression.yawn), SoundExpressionPlayMode.UntilDone)
+    if (name == "emote") {
+        if (value == 0) {
+            basic.showIcon(IconNames.Heart)
+            music.playSoundEffect(music.builtinSoundEffect(soundExpression.happy), SoundExpressionPlayMode.UntilDone)
+        } else if (value == 1) {
+            basic.showIcon(IconNames.Sad)
+            music.playSoundEffect(music.builtinSoundEffect(soundExpression.sad), SoundExpressionPlayMode.UntilDone)
+        } else if (value == 2) {
+            basic.showIcon(IconNames.Angry)
+            music.playSoundEffect(music.builtinSoundEffect(soundExpression.mysterious), SoundExpressionPlayMode.UntilDone)
+        } else if (value == 3) {
+            basic.showIcon(IconNames.Asleep)
+            music.playSoundEffect(music.builtinSoundEffect(soundExpression.yawn), SoundExpressionPlayMode.UntilDone)
+        }
     }
 })
 let yValue = 0
