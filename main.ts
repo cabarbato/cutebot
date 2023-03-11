@@ -8,7 +8,15 @@ radio.onReceivedValue(function (name, value) {
 })
 let yValue = 0
 let xValue = 0
+music.startMelody(music.builtInMelody(Melodies.Nyan), MelodyOptions.OnceInBackground)
 radio.setGroup(1)
 basic.forever(function () {
+    basic.showLeds(`
+        . . . . .
+        . # . # .
+        . . . . .
+        # . # . #
+        . # . # .
+        `)
     cuteBot.motors(yValue + xValue, yValue - xValue)
 })
