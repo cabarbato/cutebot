@@ -33,5 +33,5 @@ basic.forever(function () {
         # . # . #
         . # . # .
         `)
-    cuteBot.motors(yValue + xValue, yValue - xValue)
+    cuteBot.motors(0 - (yValue + xValue), 0 - (yValue - xValue))
 })
